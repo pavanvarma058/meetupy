@@ -43,10 +43,10 @@ yarn-error.log
 /opencode.json
 /opencode.jsonc
 package-lock.json
-.env.example
 
 # Local environment variants
 .env.*
+!.env.example
 
 # Logs and diagnostic output
 *.log
