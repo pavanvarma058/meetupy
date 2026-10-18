@@ -44,3 +44,28 @@ yarn-error.log
 /opencode.jsonc
 package-lock.json
 .env.example
+
+# Local environment variants
+.env.*
+
+# Logs and diagnostic output
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test reports and tool caches
+/coverage/
+/.nyc_output/
+/.phpstan.cache/
+/.php-cs-fixer.cache
+*.tsbuildinfo
+
+# Local database sidecar files
+/database/*.sqlite-*
+
+# Editor backups and temporary files
+*.swp
+*.swo
+*~
