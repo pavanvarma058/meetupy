@@ -14,7 +14,12 @@ export default function EventForm({ errors, meetupGroups, event }: Props) {
         <>
             <div className="grid gap-2">
                 <Label htmlFor="title">Title</Label>
-                <Input id="title" name="title" required defaultValue={event?.title} />
+                <Input
+                    id="title"
+                    name="title"
+                    required
+                    defaultValue={event?.title}
+                />
                 <InputError message={errors.title} />
             </div>
 
@@ -25,14 +30,19 @@ export default function EventForm({ errors, meetupGroups, event }: Props) {
                     name="description"
                     rows={4}
                     defaultValue={event?.description ?? ''}
-                    className="border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive flex w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                    className="flex w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 md:text-sm dark:aria-invalid:ring-destructive/40"
                 />
                 <InputError message={errors.description} />
             </div>
 
             <div className="grid gap-2">
                 <Label htmlFor="location">Location</Label>
-                <Input id="location" name="location" required defaultValue={event?.location} />
+                <Input
+                    id="location"
+                    name="location"
+                    required
+                    defaultValue={event?.location}
+                />
                 <InputError message={errors.location} />
             </div>
 
@@ -43,7 +53,11 @@ export default function EventForm({ errors, meetupGroups, event }: Props) {
                     name="starts_at"
                     type="datetime-local"
                     required
-                    defaultValue={event?.starts_at ? event.starts_at.slice(0, 16) : undefined}
+                    defaultValue={
+                        event?.starts_at
+                            ? event.starts_at.slice(0, 16)
+                            : undefined
+                    }
                 />
                 <InputError message={errors.starts_at} />
             </div>
@@ -56,7 +70,7 @@ export default function EventForm({ errors, meetupGroups, event }: Props) {
                         name="meetup_group_id"
                         required
                         defaultValue={event?.meetup_group_id}
-                        className="border-input focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive flex h-9 w-full rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                        className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 md:text-sm dark:aria-invalid:ring-destructive/40"
                     >
                         <option value="">Select a group</option>
                         {meetupGroups.map((group) => (

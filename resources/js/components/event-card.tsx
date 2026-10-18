@@ -25,7 +25,8 @@ export default function EventCard({ event }: { event: Event }) {
                 </p>
                 <p>{event.location}</p>
                 <p>
-                    {event.meetup_group?.name} &middot; Organized by {event.meetup_group?.user?.name}
+                    {event.meetup_group?.name} &middot; Organized by{' '}
+                    {event.meetup_group?.user?.name}
                 </p>
             </div>
         </Link>

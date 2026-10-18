@@ -1,7 +1,7 @@
-import { Head, Link } from "@inertiajs/react";
-import EventCard from "@/components/event-card";
-import { show } from "@/routes/events";
-import type { Event } from "@/types";
+import { Head, Link } from '@inertiajs/react';
+import EventCard from '@/components/event-card';
+import { show } from '@/routes/events';
+import type { Event } from '@/types';
 
 interface Props {
     events: Event[];

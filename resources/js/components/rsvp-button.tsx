@@ -12,8 +12,8 @@ export default function RsvpButton({ event, isRsvped }: Props) {
 
     return (
         <>
-            {auth.user && (
-                isRsvped ? (
+            {auth.user &&
+                (isRsvped ? (
                     <Link href={destroy.url(event)} method="delete" as="button">
                         Cancel
                     </Link>
@@ -21,8 +21,7 @@ export default function RsvpButton({ event, isRsvped }: Props) {
                     <Link href={store.url(event)} method="post" as="button">
                         RSVP
                     </Link>
-                )
-            )}
+                ))}
         </>
     );
 }

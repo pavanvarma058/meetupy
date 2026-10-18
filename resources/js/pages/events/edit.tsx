@@ -13,24 +13,20 @@ export default function EventEdit({ event }: Props) {
         <>
             <Head title="Edit Event" />
 
-            <Form {...EventController.update.form(event)} className="max-w-xl space-y-6"
+            <Form
+                {...EventController.update.form(event)}
+                className="max-w-xl space-y-6"
             >
                 {({ processing, errors }) => (
                     <>
-                    <EventForm
-                        errors={errors}
-                        event={event}
-                    />
+                        <EventForm errors={errors} event={event} />
 
-                    <Button type="submit" disabled={processing}>
-                        {processing ? 'Editing...' : 'Edit Event' }
-                    </Button>
-                    
+                        <Button type="submit" disabled={processing}>
+                            {processing ? 'Editing...' : 'Edit Event'}
+                        </Button>
                     </>
-
                 )}
-    
-            </Form>        
-            </>
+            </Form>
+        </>
     );
 }
